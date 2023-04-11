@@ -5,8 +5,13 @@ const path = require('path');
 
 app.use(express.static(path.join(__dirname,'public')))
 
+//Template Engine Pug Set
+app.set('view engine','pug');
+
 router.get('/',(req,res,next)=>{
-    res.status(200).sendFile(path.join(__dirname,'views','index.html'));
+    res.status(200).render('index',{
+        title: "Welcome To Sathish"
+    })
 })
 router.get('/about',(req,res,next)=>{
     res.status(200).sendFile(path.join(__dirname,'views','about.html'));
