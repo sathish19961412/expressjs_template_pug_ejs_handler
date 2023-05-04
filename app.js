@@ -10,7 +10,7 @@ app.set('view engine','pug');
 
 router.get('/',(req,res,next)=>{
     res.status(200).render('index',{
-        title: "Welcome To Sathish"
+        docTitle: "Welcome To Sathish"
     })
 })
 router.get('/about',(req,res,next)=>{
