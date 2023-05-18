@@ -9,8 +9,18 @@ app.use(express.static(path.join(__dirname,'public')))
 app.set('view engine','pug');
 
 router.get('/',(req,res,next)=>{
+    const courses=[
+        {name:'PHP'},
+        {name:'Python'},
+        {name:'Javascript'},
+        {name:'Nodejs'},
+        {name:'Reactjs'},
+        {name:'Angular'},
+        {name:'Vuejs'}
+    ]
     res.status(200).render('index',{
-        docTitle: "Welcome To Sathish"
+        docTitle: "Welcome To Sathish",
+        courses
     })
 })
 router.get('/about',(req,res,next)=>{
