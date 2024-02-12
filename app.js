@@ -33,6 +33,6 @@ router.use((req,res,next)=>{
 
 app.use(router);
 
-app.listen(8000,() => {
-    console.log('Running on 8000')
+app.listen(3000,() => {
+    console.log('Running on 3000')
 })
