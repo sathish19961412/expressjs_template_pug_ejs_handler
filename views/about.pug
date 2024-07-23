@@ -8,4 +8,9 @@ block content
             div(class="row gx-4 justify-content-center")
                 div(class="col-lg-8")
                     h2 My name is Sathish. I will Practices you the follwing courses
-                    p(class="lead") No courses available
+                    if courses.length > 0
+                        ul
+                            each course in courses 
+                                li #{course.name}
+                    else
+                        p(class="lead") No courses available
